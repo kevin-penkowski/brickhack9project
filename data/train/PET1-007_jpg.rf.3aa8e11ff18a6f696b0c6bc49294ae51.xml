@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>PET1-007_jpg.rf.3aa8e11ff18a6f696b0c6bc49294ae51.jpg</filename>
+	<path>PET1-007_jpg.rf.3aa8e11ff18a6f696b0c6bc49294ae51.jpg</path>
+	<source>
+		<database>roboflow.ai</database>
+	</source>
+	<size>
+		<width>416</width>
+		<height>416</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>plastic-bottles</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>139</xmin>
+			<xmax>293</xmax>
+			<ymin>157</ymin>
+			<ymax>308</ymax>
+		</bndbox>
+	</object>
+</annotation>
