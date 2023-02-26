@@ -4,6 +4,7 @@ import gui.camera_frame as camera_frame
 import gui.quiz_frame as quiz_frame
 import gui.score_frame as score_frame
 import gui.form_frame as form_frame
+import gui.homepage_frame as homepage_frame
 
 PROJECT_TITLE = "ForestFood"
 RESOLUTION_X, RESOLUTION_Y = 720, 480
@@ -50,7 +51,7 @@ class MainWindow():
         self.footer = tk.Frame(self.root, height=40, bg="gray")
         self.footer.pack(side=tk.BOTTOM, fill=tk.X, expand=False)
         ########################################################################
-        self.body_frame = form_frame.FormFrame(self.root)
+        self.body_frame = homepage_frame.HomepageFrame(self.root, self.quiz_frame_transition)
         
 
     def menu_pressed(self, event):
@@ -58,7 +59,12 @@ class MainWindow():
 
 
     def back_arrow_pressed(self, event):
-        self.quiz_frame_transition()
+        if type(self.body_frame) == quiz_frame.QuizFrame:
+            self.form_frame_transition()
+        elif type(self.body_frame) == form_frame.FormFrame:
+            self.camera_frame_transition()
+        else:
+            self.quiz_frame_transition()
 
 
     def camera_frame_transition(self):
@@ -77,5 +83,20 @@ class MainWindow():
         self.body_frame.update_score(score)
 
 
+    def homepage_frame_transition(self):
+        self.body_frame.unpack()
+        self.body_frame = homepage_frame.HomepageFrame(self.root, self.quiz_frame_transition)
+
+
+    def form_frame_transition(self):
+        self.body_frame.unpack()
+        self.body_frame = form_frame.FormFrame(self.root)
+
+
     def forward_arrow_pressed(self, event):
-        self.camera_frame_transition()
+        if type(self.body_frame) == camera_frame.CameraFrame:
+            self.form_frame_transition()
+        elif type(self.body_frame) == form_frame.FormFrame:
+            self.quiz_frame_transition()
+        else:
+            self.camera_frame_transition()
