@@ -1,16 +1,87 @@
 {
     "questions": [
         {
-            "question":"which is correct?",
+            "question":"Should you eat a mushroom if you are not 100% sure it is safe.",
             "question_img_path": "./src/gui_images/quiz_images/fungi.png", 
-            "answers": ["correct!", "incorrect", "not this one", "this isn't correct"],
+            "answers": ["Yeah! It's probably fine and I'm hungry!", "No way! Edible and poisonous mushrooms sometimes share features"],
             "correct_answer": 0
         },
         {
-            "question": "question2",
+            "question": "Can mushrooms be fatal to humans?",
             "question_img_path": "",
-            "answers": ["bloop", "bop", "doop"],
+            "answers": ["Nope! The human iummune system has evolved to protect against poison mushrooms.", "Yes! Though a very small percentage, some mushrooms can be fata to humans."],
+            "correct_answer": 1
+        },
+
+        {
+            "question": "What should you do before eating a mushroom?",
+            "question_img_path": "",
+            "answers": ["Check for features of poisonous mushrooms", "Wash it off.", "Check for insects on/inside the mushroom.", "All of the above"],
             "correct_answer": 2
+        },
+
+        {
+            "question": "Mushrooms with red caps...",
+            "question_img_path": "",
+            "answers": ["are always safe to eat.", "are either highly hallucinogenic or poisonous (or both)", "grow in the desert"],
+            "correct_answer": 1
+        },
+
+        {
+            "question": "What part of the mushroom is buried below the ground?",
+            "question_img_path": "",
+            "answers": ["The roots. They must be carefully removed and can't be eaten with the mushroom", "The volva. It is the bulging section at the bottom of the stem. It's presence means the mushroom is poisonous.", "The mouth. The mushroom needs nutrients to survive so it eats the dirt with it's mouth."],
+            "correct_answer": 1
+        },
+
+        {
+            "question": "What part of the mushroom is this?",
+            "question_img_path": "",
+            "answers": ["Volva", "Petals", "Gills", "Spores"],
+            "correct_answer": 2
+        },
+
+        {
+            "question": "A mushroom is a...",
+            "question_img_path": "",
+            "answers": ["Fungus", "Mammal", "Fruit", "Flower"],
+            "correct_answer": 0
+        },
+
+        {
+            "question": "The top of the mushroom is called the...",
+            "question_img_path": "",
+            "answers": ["Hat", "Tip", "Cap"],
+            "correct_answer": 2
+        },
+
+        {
+            "question": "Some mushroom toxins are used in modern medicine.",
+            "question_img_path": "",
+            "answers": ["True", "False"],
+            "correct_answer": 0
+        },
+
+        {
+            "question": "Mushrooms reproduce by releasing spores.",
+            "question_img_path": "",
+            "answers": ["True. The spores are carried by the wind or animals and reproduce where they land", " False. Spores are a physical part of the mushroom and are not released"],
+            "correct_answer": 0
+        },
+
+        {
+            "question": "What do white spores mean on a mushroom?",
+            "question_img_path": "",
+            "answers": ["The color of a mushrooms spores does not matter.", "The mushroom is very old.", "The mushroom is likely poisonous.", "It is a magical mushroom."],
+            "correct_answer": 2
+        },
+
+        {
+            "question": "I am responsible for my own actions and this software is not responsible for anything I choose to eat.",
+            "question_img_path": "",
+            "answers": ["Agree", "Disagree"],
+            "correct_answer": 0
         }
+        
     ]
 }
