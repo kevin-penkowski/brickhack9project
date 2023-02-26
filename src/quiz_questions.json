@@ -36,7 +36,7 @@
 
         {
             "question": "What part of the mushroom is this?",
-            "question_img_path": "",
+            "question_img_path": "src\\gui_images\\quiz_images\\mushroom_gills.jpeg",
             "answers": ["Volva", "Petals", "Gills", "Spores"],
             "correct_answer": 2
         },
