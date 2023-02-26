@@ -3,6 +3,7 @@ from PIL import Image, ImageTk
 import gui.camera_frame as camera_frame
 import gui.quiz_frame as quiz_frame
 import gui.score_frame as score_frame
+import gui.form_frame as form_frame
 
 PROJECT_TITLE = "ForestFood"
 RESOLUTION_X, RESOLUTION_Y = 720, 480
@@ -49,7 +50,7 @@ class MainWindow():
         self.footer = tk.Frame(self.root, height=40, bg="gray")
         self.footer.pack(side=tk.BOTTOM, fill=tk.X, expand=False)
         ########################################################################
-        self.body_frame = camera_frame.CameraFrame(self.root)
+        self.body_frame = form_frame.FormFrame(self.root)
         
 
     def menu_pressed(self, event):

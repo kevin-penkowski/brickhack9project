@@ -26,7 +26,3 @@ class ScoreFrame():
     def unpack(self):
         self.frame.pack_forget()
         self.transition_buttons_frame.pack_forget()
-
-    def pack(self):
-        self.frame.pack()
-        self.transition_buttons_frame.pack()

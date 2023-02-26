@@ -79,7 +79,3 @@ class CameraFrame():
         self.body.pack_forget()
         self.footer.pack_forget()
         self.capture.release()
-
-    def pack(self):
-        self.body.pack()
-        self.footer.pack()

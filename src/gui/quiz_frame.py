@@ -79,11 +79,6 @@ class QuizFrame():
         self.question_frame.pack_forget()
         self.answers_frame.pack_forget()
 
-    def pack(self):
-        self.question_frame.pack()
-        self.answers_frame.pack()
-        self.current_question_index = -1
-
 
 @dataclass
 class QuizQuestion():
