@@ -1,8 +1,8 @@
 import tkinter as tk
 from PIL import Image, ImageTk
-import camera_frame
-import quiz_frame
-import score_frame
+import gui.camera_frame as camera_frame
+import gui.quiz_frame as quiz_frame
+import gui.score_frame as score_frame
 
 PROJECT_TITLE = "ForestFood"
 RESOLUTION_X, RESOLUTION_Y = 720, 480
@@ -44,10 +44,13 @@ class MainWindow():
         self.forward_arrow_icon = tk.Label(self.arrow_frame, image=self.forward_arrow_image)
         self.forward_arrow_icon.pack(side=tk.RIGHT)
         self.forward_arrow_icon.bind("<Button-1>", self.forward_arrow_pressed)
-        #######################################################################0
+        #######################################################################
+        # Footer Frame
+        self.footer = tk.Frame(self.root, height=40, bg="gray")
+        self.footer.pack(side=tk.BOTTOM, fill=tk.X, expand=False)
+        ########################################################################
         self.body_frame = camera_frame.CameraFrame(self.root)
         
-
 
     def menu_pressed(self, event):
         pass

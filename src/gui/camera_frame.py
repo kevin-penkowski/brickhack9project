@@ -1,9 +1,9 @@
 import tkinter as tk
 from PIL import Image, ImageTk
-from classification import Classification
+from gui.classification import Classification
 import cv2
 import datetime
-import main_window
+import gui.main_window as main_window
 
 class CameraFrame():
     def __init__(self, root):
@@ -44,15 +44,20 @@ class CameraFrame():
 
     def show_frame_in_window(self):
         # Get the latest frame and convert into Image
-        resized = cv2.resize(self.capture.read()[1], (main_window.IMG_RESOLUTION_X, main_window.IMG_RESOLUTION_Y))
-        cv2image= cv2.cvtColor(resized,cv2.COLOR_BGR2RGB)
-        img = Image.fromarray(cv2image)
+        try: 
+            resized = cv2.resize(self.capture.read()[1], (main_window.IMG_RESOLUTION_X, main_window.IMG_RESOLUTION_Y))
+            flipped = cv2.flip(resized, 1)
+            cv2image= cv2.cvtColor(flipped,cv2.COLOR_BGR2RGB)
+            img = Image.fromarray(cv2image)
 
-        # Convert image to PhotoImage
-        self.camera_img = ImageTk.PhotoImage(image = img)
-        self.camera_label.configure(image=self.camera_img)
-        #loop
-        self.camera_label.after(25, self.show_frame_in_window)
+            # Convert image to PhotoImage
+            self.camera_img = ImageTk.PhotoImage(image = img)
+            self.camera_label.configure(image=self.camera_img)
+            #loop
+            self.camera_label.after(25, self.show_frame_in_window)
+        except:
+            pass
+        
 
 
     def update_classification_label(self, new_classification):
@@ -73,6 +78,7 @@ class CameraFrame():
     def unpack(self):
         self.body.pack_forget()
         self.footer.pack_forget()
+        self.capture.release()
 
     def pack(self):
         self.body.pack()
