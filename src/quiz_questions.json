@@ -1,0 +1,16 @@
+{
+    "questions": [
+        {
+            "question":"which is correct?",
+            "question_img_path": "./src/gui_images/quiz_images/fungi.png", 
+            "answers": ["correct!", "incorrect", "not this one", "this isn't correct"],
+            "correct_answer": 0
+        },
+        {
+            "question": "question2",
+            "question_img_path": "",
+            "answers": ["bloop", "bop", "doop"],
+            "correct_answer": 2
+        }
+    ]
+}
