@@ -4,6 +4,29 @@ import csv
 #gill color: black=k,brown=n,buff=b,chocolate=h,gray=g, green=r,orange=o,pink=p,purple=u,red=e,white=w,yellow=y
 #stalk texture (above and below ring): fibrous=f,scaly=y,silky=k,smooth=s
 
+def convert_feature_to_symbol(feature_category):
+    if feature_category == "anise":
+        return "l"
+    elif feature_category == "fishy":
+        return "y"
+    if feature_category == "black":
+        return "k"
+    elif feature_category == "brown":
+        return "n"
+    elif feature_category == "chocolate":
+        return "h"
+    elif feature_category == "green":
+        return "r"
+    elif feature_category == "purple":
+        return "u"
+    elif feature_category == "red":
+        return "e"
+    elif feature_category == "scaly":
+        return "y"
+    elif feature_category == "silky":
+        return "k"
+    return feature_category[0]
+
 def breakdown_into_features_with_decision(odor, gill_color, stalk_above, stalk_below, result):
     #(a, l, c, y, f, m, n, p, s)
     stitched_array = []
